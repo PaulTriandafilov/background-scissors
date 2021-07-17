@@ -1,0 +1,31 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop_loader {
+  width: 5rem;
+  height: 5rem;
+  border: 10px solid #19b9b9d2;
+  border-radius: 999px;
+  animation: loader_3 1s ease-in-out 0s infinite;
+}
+
+@keyframes loader_3 {
+  0% {
+    border: 5px solid #19b9b9d2;
+  }
+  50% {
+    border: 10px solid #094141d2;
+  }
+  100% {
+    border: 5px solid #19b9b9d2;
+  }
+}

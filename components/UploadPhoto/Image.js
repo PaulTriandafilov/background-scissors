@@ -1,7 +1,15 @@
 import classes from "./Image.module.css";
+import ImageBackDrop from "./ImageBackdrop";
 
 const Image = (props) => {
-  return <img className={classes.image} src={props.src} alt="Uploaded photo" />;
+  const isProcessing = props.isProcessing;
+
+  return (
+    <>
+      {isProcessing && <ImageBackDrop />}
+      <img className={classes.image} src={props.src} alt="Uploaded photo" />
+    </>
+  );
 };
 
 export default Image;

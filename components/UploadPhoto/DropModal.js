@@ -3,9 +3,11 @@ import DropArea from "./DropArea";
 import Image from "./Image";
 
 const DropModal = (props) => {
+  const [isProcessing, setIsProcessing] = useState(null);
   const [src, setSrc] = useState(null);
 
   async function onDropHandler(files, event) {
+    setIsProcessing(true);
     const file = files[0];
 
     const reader = new FileReader();
@@ -26,11 +28,12 @@ const DropModal = (props) => {
 
     const data = await response.blob();
     setSrc(URL.createObjectURL(data));
+    setIsProcessing(false);
   }
 
   return (
     <>
-      {src && <Image src={src} />}
+      {src && <Image isProcessing={isProcessing} src={src} />}
       {!src && <DropArea onDrop={onDropHandler} />}
     </>
   );
