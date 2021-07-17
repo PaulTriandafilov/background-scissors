@@ -1,0 +1,39 @@
+.instruction ul {
+  list-style: none;
+  text-align: left;
+  border-right: 1px solid white;
+}
+
+.instruction li {
+  margin: 1rem;
+  font-size: 110%;
+}
+
+.main_action {
+  margin-left: 20px;
+}
+
+.main_action button {
+  font-size: 130%;
+  background-color: #19b9b946;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px 2px #5c5c5c;
+  transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
+  padding: 10px 30px;
+}
+
+.main_action button:hover,
+.main_action button:active {
+  background-color: transparent;
+}
+
+.main_action button:hover {
+  box-shadow: 1px 5px 10px 2px #5c5c5c;
+}
+
+.main_action button:active {
+  box-shadow: none;
+}

@@ -1,0 +1,12 @@
+.droparea_container {
+  background-color: #19b9b946;
+  height: 200px;
+  border: 2px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.droparea_container .droparea_text {
+  color: black;
+}
