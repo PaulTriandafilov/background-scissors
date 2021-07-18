@@ -4,6 +4,7 @@ import Image from "./Image";
 
 const DropModal = (props) => {
   const [isProcessing, setIsProcessing] = useState(null);
+  const [isProcessed, setIsProcessed] = useState(null);
   const [src, setSrc] = useState(null);
 
   async function requestApi(file) {
@@ -37,11 +38,24 @@ const DropModal = (props) => {
     const srcWithoutBG = await requestApi(file);
     setSrc(srcWithoutBG);
     setIsProcessing(false);
+    setIsProcessed(true);
   }
+
+  const onResetHandler = () => {
+    setIsProcessed(false);
+    setSrc(null);
+  };
 
   return (
     <>
-      {src && <Image isProcessing={isProcessing} src={src} />}
+      {src && (
+        <Image
+          onReset={onResetHandler}
+          isProcessing={isProcessing}
+          isProcessed={isProcessed}
+          src={src}
+        />
+      )}
       {!src && <DropArea onAttachFile={onAttachFileHandler} />}
     </>
   );

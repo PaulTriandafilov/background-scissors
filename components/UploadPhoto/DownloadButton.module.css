@@ -1,0 +1,5 @@
+.download_button_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
