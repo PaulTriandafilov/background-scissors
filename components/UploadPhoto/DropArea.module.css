@@ -10,3 +10,7 @@
 .droparea_container .droparea_text {
   color: black;
 }
+
+.droparea_input {
+  display: none;
+}
