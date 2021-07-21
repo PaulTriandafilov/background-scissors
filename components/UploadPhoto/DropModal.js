@@ -3,10 +3,14 @@ import DropArea from "./DropArea";
 import Image from "./Image";
 import Notification from "../ui/Notification";
 
+const SUPPORTED_TYPES = ["image/jpeg", "image/png"];
+const MAX_FILE_SIZE = 10000000;
+
 const DropModal = (props) => {
   const [isProcessing, setIsProcessing] = useState(null);
   const [isProcessed, setIsProcessed] = useState(null);
   const [hasErrors, setHasErrors] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("Something went wrong");
   const [src, setSrc] = useState(null);
 
   async function requestApi(file) {
@@ -39,11 +43,23 @@ const DropModal = (props) => {
   async function onAttachFileHandler(files, event) {
     if (files.length > 1) {
       setHasErrors(true);
+      setErrorMessage("Please upload only 1 file");
+      return;
+    }
+    const file = files[0];
+
+    if (file.size > MAX_FILE_SIZE) {
+      setHasErrors(true);
+      setErrorMessage("Too large file. Max size 10mb");
       return;
     }
 
+    if (!SUPPORTED_TYPES.includes(file.type)) {
+      setHasErrors(true);
+      setErrorMessage("Unsupported file type");
+      return;
+    }
     setIsProcessing(true);
-    const file = files[0];
 
     updateSrcFromFile(file);
 
@@ -73,7 +89,7 @@ const DropModal = (props) => {
         <Notification
           show={hasErrors}
           resetErrors={resetErrors}
-          message="Please upload only 1 file"
+          message={errorMessage}
         />
       )}
     </>

@@ -20,6 +20,9 @@ const UploadPhoto = (props) => {
       {showModal && (
         <Modal onCloseModal={closeModalHandler}>
           <DropModal />
+          <p className={classes.supported_text}>
+            Max file size: 10Mb. Types: jpg, jpeg, png, gif
+          </p>
         </Modal>
       )}
       <div className={classes.instruction}>

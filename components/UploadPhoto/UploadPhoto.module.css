@@ -37,3 +37,9 @@
 .main_action button:active {
   box-shadow: none;
 }
+
+.supported_text {
+  color: #5c5c5c;
+  font-size: 80%;
+  margin-top: 0.5rem;
+}

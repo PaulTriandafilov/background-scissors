@@ -9,7 +9,7 @@ const Notification = (props) => {
   setTimeout(() => {
     setClassNames(classes.notification_container);
     props.resetErrors();
-  }, 5000);
+  }, 7000);
 
   return <div className={classNames}>{props.message}</div>;
 };

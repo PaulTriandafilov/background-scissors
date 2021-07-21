@@ -14,7 +14,7 @@
 
 .animation_in {
   display: flex;
-  animation: anim_in 0.5s linear;
+  animation: anim_in 0.7s linear;
 }
 
 @keyframes anim_in {
