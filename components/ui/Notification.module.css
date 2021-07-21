@@ -1,0 +1,28 @@
+.notification_container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: 2px solid red;
+  background-color: rgba(128, 128, 128, 0.356);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.animation_in {
+  display: flex;
+  animation: anim_in 0.5s linear;
+}
+
+@keyframes anim_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

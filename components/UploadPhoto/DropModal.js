@@ -1,10 +1,12 @@
 import { useState } from "react";
 import DropArea from "./DropArea";
 import Image from "./Image";
+import Notification from "../ui/Notification";
 
 const DropModal = (props) => {
   const [isProcessing, setIsProcessing] = useState(null);
   const [isProcessed, setIsProcessed] = useState(null);
+  const [hasErrors, setHasErrors] = useState(false);
   const [src, setSrc] = useState(null);
 
   async function requestApi(file) {
@@ -30,9 +32,19 @@ const DropModal = (props) => {
     reader.readAsDataURL(file);
   };
 
+  const resetErrors = () => {
+    setHasErrors(false);
+  };
+
   async function onAttachFileHandler(files, event) {
+    if (files.length > 1) {
+      setHasErrors(true);
+      return;
+    }
+
     setIsProcessing(true);
     const file = files[0];
+
     updateSrcFromFile(file);
 
     const srcWithoutBG = await requestApi(file);
@@ -57,6 +69,13 @@ const DropModal = (props) => {
         />
       )}
       {!src && <DropArea onAttachFile={onAttachFileHandler} />}
+      {hasErrors && (
+        <Notification
+          show={hasErrors}
+          resetErrors={resetErrors}
+          message="Please upload only 1 file"
+        />
+      )}
     </>
   );
 };
