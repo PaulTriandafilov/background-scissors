@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       {
         method: "POST",
         headers: {
-          "x-api-key": "RVu8i8KoBDRKRsYcbN3OusYXpt1Vzv1T5XCsaOl6CHx1",
+          "x-api-key": "RVu8i8KoBDRKRsYcbN3OusYXpt1Vzv1T5XCsaOl6CHx",
         },
         body: formData,
       }

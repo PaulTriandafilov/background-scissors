@@ -5,7 +5,8 @@
 
   /* Flexbox stuff */
   display: flex;
-  justify-content: start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   /* Text styles */
@@ -21,11 +22,40 @@
   background-attachment: fixed;
 }
 
+.hero h1 {
+  max-width: 80%;
+}
+
 .main_container {
-  width: 50%;
+  width: 80%;
   height: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Big tablets to 1200px */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Small tablets to big tablets: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Small phones to small tablets: 481 to 767px */
+@media only screen and (max-width: 767px) {
+  .main_container {
+    width: 100%;
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
 }

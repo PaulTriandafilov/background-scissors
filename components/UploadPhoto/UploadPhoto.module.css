@@ -43,3 +43,35 @@
   font-size: 80%;
   margin-top: 0.5rem;
 }
+
+/* Big tablets to 1200px */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Small tablets to big tablets: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Small phones to small tablets: 481 to 767px */
+@media only screen and (max-width: 767px) {
+  .instruction ul {
+    list-style: none;
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+
+  .instruction li {
+    margin: 1rem 0;
+    font-size: 110%;
+  }
+
+  .main_action {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
+}

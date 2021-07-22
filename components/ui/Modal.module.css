@@ -23,3 +23,28 @@
     opacity: 1;
   }
 }
+
+/* Big tablets to 1200px */
+@media only screen and (max-width: 1200px) {
+  .modal {
+    min-width: 60%;
+    max-width: 80%;
+  }
+}
+
+/* Small tablets to big tablets: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Small phones to small tablets: 481 to 767px */
+@media only screen and (max-width: 767px) {
+  .modal {
+    top: 30%;
+    min-width: 80%;
+    max-width: 90%;
+  }
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
+}
