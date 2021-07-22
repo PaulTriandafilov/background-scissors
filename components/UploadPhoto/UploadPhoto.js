@@ -29,23 +29,19 @@ const UploadPhoto = (props) => {
         <ul>
           <li>
             <i className="ion-ios-checkmark-outline icon-small" />
-            Upload an image
+            <span>Upload an image</span>
           </li>
           <li>
             <i className="ion-ios-checkmark-outline icon-small" />
-            Click procceed
+            <span>Wait for AI remove background</span>
           </li>
           <li>
             <i className="ion-ios-checkmark-outline icon-small" />
-            Wait for process to be done
+            <span>Download your image without background.</span>
           </li>
           <li>
             <i className="ion-ios-checkmark-outline icon-small" />
-            Confirm result
-          </li>
-          <li>
-            <i className="ion-ios-checkmark-outline icon-small" />
-            Download the image without background
+            <span>Repeat.</span>
           </li>
         </ul>
       </div>

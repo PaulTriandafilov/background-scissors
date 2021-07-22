@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"
         />
-        <title>Remove Background</title>
+        <title>BackgroundScissors</title>
       </Head>
       <Component {...pageProps} />
     </>

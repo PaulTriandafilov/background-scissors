@@ -7,6 +7,8 @@
 .instruction li {
   margin: 1rem;
   font-size: 110%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .main_action {
@@ -63,7 +65,11 @@
 
   .instruction li {
     margin: 1rem 0;
-    font-size: 110%;
+    font-size: 100%;
+  }
+
+  .instruction li i {
+    font-size: 25px;
   }
 
   .main_action {
