@@ -32,7 +32,7 @@ const DropArea = (props) => {
         onDrop={onDropHandler}
         onTargetClick={onTargetClickHandler}
       >
-        <span className={classes.droparea_text}>Drop photo here!</span>
+        <span className={classes.droparea_text}>Drop a photo here!</span>
       </FileDrop>
       <input
         onChange={onFileInputChange}

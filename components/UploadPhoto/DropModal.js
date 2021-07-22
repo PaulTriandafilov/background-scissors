@@ -22,6 +22,12 @@ const DropModal = (props) => {
       body: formData,
     });
 
+    if (response.status !== 200) {
+      setHasErrors(true);
+      setSrc(null);
+      return;
+    }
+
     const data = await response.blob();
     return URL.createObjectURL(data);
   }
