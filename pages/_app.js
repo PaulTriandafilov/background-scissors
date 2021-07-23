@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Background Scissors - easely remove background from your photos online for free."
+          content="Background Scissors - easily remove background from your photos online for free."
         />
         <meta
           name="keywords"
