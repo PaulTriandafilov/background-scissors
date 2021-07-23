@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  width: 15rem;
+  width: 20rem;
   height: 3rem;
   border-radius: 5px;
   border: 2px solid red;
@@ -25,4 +25,24 @@
   100% {
     opacity: 1;
   }
+}
+
+/* Big tablets to 1200px */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Small tablets to big tablets: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Small phones to small tablets: 481 to 767px */
+@media only screen and (max-width: 767px) {
+  .notification_container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
 }

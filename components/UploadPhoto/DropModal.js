@@ -10,7 +10,9 @@ const DropModal = (props) => {
   const [isProcessing, setIsProcessing] = useState(null);
   const [isProcessed, setIsProcessed] = useState(null);
   const [hasErrors, setHasErrors] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("Something went wrong");
+  const [errorMessage, setErrorMessage] = useState(
+    "Something went wrong. Try again later"
+  );
   const [src, setSrc] = useState(null);
 
   async function requestApi(file) {

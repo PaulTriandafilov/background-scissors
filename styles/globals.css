@@ -144,6 +144,13 @@ a:active {
   height: 100%;
 }
 
+.file-drop-target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .file-drop-target:hover {
   background-color: rgba(172, 250, 169, 0.288);
 }

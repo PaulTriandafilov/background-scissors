@@ -32,7 +32,11 @@ const DropArea = (props) => {
         onDrop={onDropHandler}
         onTargetClick={onTargetClickHandler}
       >
-        <span className={classes.droparea_text}>Drop a photo here!</span>
+        <div className={classes.hint_container}>
+          <i className="ion-upload icon-small" />
+          <span className={classes.droparea_text}>Drop a photo here!</span>
+        </div>
+        <span className={classes.sub_hint}>or click...</span>
       </FileDrop>
       <input
         onChange={onFileInputChange}

@@ -2,8 +2,9 @@
   position: fixed;
   z-index: 500;
   background-color: white;
-  min-width: 40%;
-  max-width: 60%;
+  min-width: 40vw;
+  max-width: 60vw;
+  max-height: 80vh;
   margin: 0 auto;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;

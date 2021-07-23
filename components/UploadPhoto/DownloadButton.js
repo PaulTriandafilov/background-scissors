@@ -10,7 +10,7 @@ const DownloadButton = (props) => {
 
   return (
     <div className={classes.download_button_container}>
-      <a download="custom-filename.jpg" href={src} title="Download">
+      <a download="without-background.png" href={src} title="Download">
         Download
       </a>
       <a onClick={onResetClickedHandler} href="#">

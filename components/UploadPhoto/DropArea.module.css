@@ -14,3 +14,15 @@
 .droparea_input {
   display: none;
 }
+
+.hint_container i {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0px;
+  color: black;
+}
+
+.sub_hint {
+  font-size: 80%;
+  color: gray;
+}
