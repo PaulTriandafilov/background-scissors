@@ -19,10 +19,16 @@ const DropModal = (props) => {
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch("/api/rm-bg", {
-      method: "POST",
-      body: formData,
-    });
+    const response = await fetch(
+      "https://api.massless.io/v1/image/ml/remove-background",
+      {
+        method: "POST",
+        headers: {
+          "x-api-key": "RVu8i8KoBDRKRsYcbN3OusYXpt1Vzv1T5XCsaOl6CHx",
+        },
+        body: formData,
+      }
+    );
 
     if (response.status !== 200) {
       setHasErrors(true);
