@@ -11,7 +11,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Background Scissors - easely remove background from yout photos online for free."
+          content="Background Scissors - easely remove background from your photos online for free."
+        />
+        <meta
+          name="keywords"
+          content="Remove background,remove image bg,remove photo bg,remove jpg/jpeg bg,white background,make transparent background"
         />
         <link
           rel="apple-touch-icon"
